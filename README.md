@@ -6,7 +6,7 @@ A classic memory card matching game built with **React**. Flip cards, find match
 
 ## 🎮 Demo
 
-> Coming soon / [Live Demo](#)
+> [Live Demo](https://memory-card-game-lilac-seven.vercel.app/)
 
 ---
 
