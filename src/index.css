@@ -1,0 +1,62 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #080810;
+  --surface: #0f0f1a;
+  --surface-2: #13131f;
+  --surface-3: #1a1a2e;
+  --border: rgba(255,255,255,0.07);
+  --border-bright: rgba(255,255,255,0.13);
+  --accent: #8b7cf8;
+  --accent-dim: rgba(139,124,248,0.15);
+  --accent-2: #f76a8a;
+  --accent-2-dim: rgba(247,106,138,0.12);
+  --gold: #f4c55a;
+  --text-primary: #ededf4;
+  --text-secondary: #7a7a9a;
+  --success: #5af4a0;
+  --success-dim: rgba(90,244,160,0.12);
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-lg: 22px;
+  --card-size: min(18vw, 100px);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ambient glow blobs */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+}
+body::before {
+  width: 500px; height: 500px;
+  top: -120px; right: -80px;
+  background: radial-gradient(circle, rgba(139,124,248,0.18) 0%, transparent 70%);
+}
+body::after {
+  width: 400px; height: 400px;
+  bottom: -100px; left: -60px;
+  background: radial-gradient(circle, rgba(247,106,138,0.14) 0%, transparent 70%);
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
